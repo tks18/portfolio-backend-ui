@@ -1,16 +1,18 @@
 <template>
-  <div class="home">
-    <v-col align="center">
-      <div class="text-title">Home Page</div>
-      <v-skeleton-loader
-        type="card"
-        max-width="300"
-        class="mx-auto"
-      ></v-skeleton-loader>
-      <div class="text-body-1">
-        We are Constructing our UI, We will Come Striking
-      </div>
-    </v-col>
+  <div class="content">
+    <v-row>
+      <v-col class="my-12 mx-6" cols="12">
+        <div class="gradient-background non-touch clip-text">
+          <div class="text-subtitle-2 font-weight-bold">
+            The Most Iconic Portfolio Website
+          </div>
+          <div class="text-h1 underhover font-weight-black">Shan.tk</div>
+          <div class="text-h6 font-weight-bold">
+            Built with So many Features
+          </div>
+        </div>
+      </v-col>
+    </v-row>
   </div>
 </template>
 
