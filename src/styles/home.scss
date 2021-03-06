@@ -1,0 +1,54 @@
+.gradient-background {
+  background-image: linear-gradient(
+    to right top,
+    #fc00ff,
+    #6a8cff,
+    #00b8ff,
+    #00cfff,
+    #00dbde
+  );
+  background-size: 400% 400%;
+  -webkit-animation: fluidAnimation 13s ease-in-out infinite;
+  -moz-animation: fluidAnimation 13s ease-in-out infinite;
+  animation: fluidAnimation 13s ease-in-out infinite;
+}
+
+.clip-text {
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+@-webkit-keyframes fluidAnimation {
+  0% {
+    background-position: 94% 0%;
+  }
+  50% {
+    background-position: 7% 100%;
+  }
+  100% {
+    background-position: 94% 0%;
+  }
+}
+@-moz-keyframes fluidAnimation {
+  0% {
+    background-position: 94% 0%;
+  }
+  50% {
+    background-position: 7% 100%;
+  }
+  100% {
+    background-position: 94% 0%;
+  }
+}
+@keyframes fluidAnimation {
+  0% {
+    background-position: 94% 0%;
+  }
+  50% {
+    background-position: 7% 100%;
+  }
+  100% {
+    background-position: 94% 0%;
+  }
+}

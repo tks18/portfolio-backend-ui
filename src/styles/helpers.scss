@@ -1,0 +1,28 @@
+.point-cursor {
+  cursor: pointer;
+}
+
+.non-touch {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.underhover {
+  width: fit-content;
+  text-decoration: none;
+  &:after {
+    content: ' ';
+    display: block;
+    height: 2.3px;
+    width: 0;
+    background: transparent;
+    transition: width 0.5s ease-in-out, background-color 0.5s ease-in-out;
+  }
+  &:hover:after {
+    width: 100%;
+    background: white;
+  }
+}
