@@ -2,7 +2,7 @@
   <v-navigation-drawer v-model="$state.navbar.active" app>
     <v-container>
       <div class="text-center">
-        <v-toolbar-title v-if="!ismobile" class="text-h6 font-weight-black">
+        <v-toolbar-title class="text-h6 font-weight-black">
           {{ title }}
         </v-toolbar-title>
         <div

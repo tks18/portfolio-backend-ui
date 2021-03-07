@@ -1,11 +1,12 @@
 .gradient-background {
   background-image: linear-gradient(
-    to right top,
-    #fc00ff,
-    #6a8cff,
-    #00b8ff,
-    #00cfff,
-    #00dbde
+    89.8deg,
+    rgba(204, 156, 223, 1) 0.3%,
+    rgba(155, 219, 245, 1) 20.4%,
+    rgba(245, 183, 208, 1) 40.2%,
+    rgba(250, 186, 98, 1) 62.9%,
+    rgba(234, 238, 240, 1) 81.9%,
+    rgba(250, 245, 171, 1) 99.2%
   );
   background-size: 400% 400%;
   -webkit-animation: fluidAnimation 13s ease-in-out infinite;
