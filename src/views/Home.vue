@@ -11,7 +11,10 @@
               <div
                 v-on="on"
                 v-bind="attrs"
-                class="text-h1 underhover point-cursor font-weight-black"
+                :class="
+                  (ismobile ? ' text-h2 ' : ' text-h1 ') +
+                  ' underhover point-cursor font-weight-black'
+                "
                 @click="goToUrl('https://shaaan.tk')"
               >
                 Shan.tk
@@ -47,7 +50,7 @@
               <template v-slot:activator="{ on, attrs }">
                 <v-btn
                   icon
-                  large
+                  :large="!ismobile"
                   v-on="on"
                   v-bind="attrs"
                   @click="goToUrl(icon.link)"
@@ -70,7 +73,7 @@
                   @click="goToUrl(accountDetails.link)"
                   v-on="on"
                   v-bind="attrs"
-                  large
+                  :large="!ismobile"
                   icon
                 >
                   <v-icon color="primary">
@@ -87,13 +90,14 @@
         <v-divider></v-divider>
       </v-col>
       <v-col cols="12">
-        <div class="text-subtitle-1 font-weight-bold"></div>
+        <div class="text-subtitle-1 font-weight-bold">Brief:</div>
       </v-col>
     </v-row>
   </div>
 </template>
 
 <script>
+import { ismobile } from '@/plugins/helpers';
 export default {
   name: 'Home',
   data: () => {
@@ -113,6 +117,9 @@ export default {
     },
   },
   computed: {
+    ismobile() {
+      return ismobile();
+    },
     techIcons() {
       return [
         {
