@@ -38,7 +38,7 @@
           Utilizing Next Gen Technologies
           <v-icon class="mx-1" color="error">mdi-web</v-icon>
         </div>
-        <div class="text-h6 mx-3 font-weight-bold">
+        <div class="text-subtitle-1 mx-3 font-weight-bold">
           <span class="mx-2"> Uses </span>
           <span class="icon">
             <v-tooltip
@@ -90,7 +90,32 @@
         <v-divider></v-divider>
       </v-col>
       <v-col cols="12">
-        <div class="text-subtitle-1 font-weight-bold">Brief:</div>
+        <v-img
+          src="https://media.giphy.com/media/NUwoRZzHc2Bws/giphy.gif"
+          :max-height="ismobile ? 230 : 300"
+        ></v-img>
+      </v-col>
+      <v-col id="home-brief" cols="12 mx-4">
+        <div class="text-h5 underhover non-touch font-weight-bold my-1">
+          Brief
+        </div>
+        <div class="text-body-1">
+          {{ project_desc }}
+        </div>
+      </v-col>
+      <v-col cols="12">
+        <v-img
+          src="https://media.giphy.com/media/3o72FkiKGMGauydfyg/giphy.gif"
+          :max-height="ismobile ? 230 : 300"
+        ></v-img>
+      </v-col>
+      <v-col id="home-current-status" cols="12 mx-4">
+        <div class="text-h5 underhover non-touch font-weight-bold my-1">
+          Project Status
+        </div>
+        <div class="text-body-1">
+          {{ project_status }}
+        </div>
       </v-col>
     </v-row>
   </div>
@@ -107,6 +132,22 @@ export default {
         tip: 'A Developer like Me',
         link: 'https://shaaan.tk/',
       },
+      nav_drawer_icons: [
+        {
+          icon: 'mdi-artstation',
+          name: 'Breif',
+          id: '#home-brief',
+        },
+        {
+          icon: 'mdi-sign-real-estate',
+          name: 'Project Status',
+          id: '#home-current-status',
+        },
+      ],
+      project_desc:
+        "I am Super Excited to Announce that this is 'The' Most Comprehensive Portfolio Website Ever Created by a Developer. I have Created this Website with Developers in Mind. I will Have Many Tools/Services that will be Integrated inside the Same Hood to Help Developers in Many of the Tasks in Creating a Website. After Finishing the Website, this will be a Goto tool for any Developer for Complete Website Tools like Wireframing, Color Scheming, Gradient Tools, Design Tools & Examples. I will Have a Complete Blog, Gallery Integrated. We will also Have a Developer Careers Page, So that Enthusiastic and Skilled Developers Can get a Job.",
+      project_status:
+        'Currently the Project is Under Work-in-Progress. I will Get Everything Up and Running smoothly. Already this project has Spanned around 350+ Hours.',
     };
   },
   components: {},
@@ -154,6 +195,9 @@ export default {
         },
       ];
     },
+  },
+  beforeMount() {
+    this.$state.navdrawericons = this.nav_drawer_icons;
   },
 };
 </script>
